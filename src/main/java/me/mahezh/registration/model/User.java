@@ -51,7 +51,7 @@ public class User {
 		
 	}
 	
-	public User(String fistName, String lastName, String email, String password) {
+	public User(String fistName, String lastName, String email, String password, Collection<Role> role) {
 		super();
 		this.firstName=firstName;
 		this.lastName=lastName;
