@@ -25,7 +25,7 @@ public class UserRegistrationController {
 	
 	//Thymeleaf get user registration details here
 	@ModelAttribute("user")
-	public UserRegistrationDto userregistrationDto() {
+	public UserRegistrationDto userRegistrationDto() {
 		return new UserRegistrationDto();
 	}
 	
