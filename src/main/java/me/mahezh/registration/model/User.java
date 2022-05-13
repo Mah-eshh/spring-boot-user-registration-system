@@ -2,13 +2,19 @@ package me.mahezh.registration.model;
 
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import org.hibernate.annotations.ManyToAny;
 
 
 @Entity
@@ -63,6 +69,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	} 
+	@ManyToMany(fetch =FetchType.EAGER, cascade = CascadeType.ALL)
 	public Collection<Role>getRoles(){
 		return roles;
 	} 
