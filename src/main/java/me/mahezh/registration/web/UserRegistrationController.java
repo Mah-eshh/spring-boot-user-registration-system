@@ -14,12 +14,19 @@ import me.mahezh.registration.web.dto.UserRegistrationDto;
 
 public class UserRegistrationController {
 	
+	
 	//Inject userService
 	private UserService userService;
 
 	public UserRegistrationController(UserService userService) {
 		super();
 		this.userService = userService;
+	}
+	
+	//Thymeleaf get user registration details here
+	@ModelAttribute("user")
+	public UserRegistrationDto userregistrationDto() {
+		return new UserRegistrationDto();
 	}
 	
 	@GetMapping
