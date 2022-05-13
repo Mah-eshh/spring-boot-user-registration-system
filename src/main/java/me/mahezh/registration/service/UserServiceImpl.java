@@ -2,11 +2,12 @@ package me.mahezh.registration.service;
 
 import java.util.Arrays;
 
-import javax.management.relation.Role;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import me.mahezh.registration.model.Role;
 import me.mahezh.registration.model.User;
 import me.mahezh.registration.repository.UserRepository;
 import me.mahezh.registration.web.dto.UserRegistrationDto;
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService {
 		super();
 		this.userRepository = userRepository;
 	}
+	
 
 	@Override
 	public User save(UserRegistrationDto registrationDto) {
